@@ -1,0 +1,2 @@
+This folder contains my Networking study notes and practice labs.
+Goal: Build strong networking foundation for DevOps & Cloud Engineering.
