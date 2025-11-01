@@ -2,10 +2,10 @@
 
 Picture this:
 
-Networking = roads.
-Devices = cars.
-Switches = traffic officers inside one town.
-Routers = highway junctions connecting towns, cities, and countries.
+- Networking = roads.
+- Devices = cars.
+- Switches = traffic officers inside one town.
+- Routers = highway junctions connecting towns, cities, and countries.
 
 As DevOps engineer, we must understand how data travels across networks, from our laptop to AWS, from pods inside Kubernetes, across VPCs, and through load balancers.
 
