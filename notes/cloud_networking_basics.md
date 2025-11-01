@@ -1,6 +1,6 @@
 # ☁️ Cloud Networking Fundamentals
 
-Cloud networking brings traditional networking concepts into cloud environments — like AWS, Azure, and GCP — but with virtualized components instead of physical routers and switches.
+Cloud networking brings traditional networking concepts into cloud environments, like AWS, Azure, and GCP, but with virtualized components instead of physical routers and switches.
 
 > The cloud is just someone else's computer, but with **virtual networking superpowers**.
 
@@ -39,7 +39,7 @@ Public Internet modem | Internet Gateway |
 NAT Box | NAT Gateway |
 Corporate leased line | VPN / Direct Connect |
 
-The rules of networking still apply — **just virtualized and scalable**.
+The rules of networking still apply, **just virtualized and scalable**.
 
 ---
 
