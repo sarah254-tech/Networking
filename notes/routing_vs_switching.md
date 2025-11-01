@@ -115,12 +115,12 @@ In linux terminal: `ip route show`
 
 Example of output:
 
-`nginx`
+nginx
+>default via '192.168.1.1' dev wlan0
+>'192.168.1.0/24' dev wlan0 proto kernel scope link src '192.168.>1'.
 
-    default via 192.168.1.1 dev wlan0
-    192.168.1.0/24 dev wlan0 proto kernel scope link src 192.168.1.
-    
-    | Field                     | Meaning         |
+
+  | Field                     | Meaning         |
 | ------------------------- | --------------- |
 | default via `192.168.1.1` | Default gateway |
 | `192.168.1.0/24`          | Local network   |
