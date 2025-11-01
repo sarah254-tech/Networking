@@ -1,0 +1,325 @@
+# ⚖️ Load Balancing & Reverse Proxy
+
+Load balancing and reverse proxies are **superpowers** in modern infrastructure.  
+They help scale applications, keep traffic healthy, secure systems, and ensure apps never go down (even when servers do).
+
+If you’ve used Nginx, HAProxy, AWS ALB, Cloudflare, or Traefik — you’ve touched load balancing and reverse proxying.
+
+Let’s break this down in a **Simple, practical, and fun** way 🚀
+
+---
+
+## 🧠 What Is Load Balancing?
+
+**Load balancing** is the process of distributing incoming network traffic across multiple servers to:
+
+✅ Improve performance  
+✅ Prevent overload  
+✅ Increase availability  
+✅ Enable horizontal scaling  
+✅ Provide fault tolerance  
+
+> Imagine a restaurant with one chef vs many chefs.  
+> The load balancer is the waiter who sends orders to the chef with free hands 🍽️
+
+---
+
+## 🧩 Types of Load Balancers
+
+| Type | Works On | Description | Examples |
+|------|---------|-------------|---------|
+**Layer 4 (Transport)** | TCP/UDP | Routes traffic based on IP/Port | HAProxy (L4 mode), AWS NLB |
+**Layer 7 (Application)** | HTTP/HTTPS | Understands application data (URLs, cookies, headers) | Nginx, AWS ALB, Traefik |
+**Global Load Balancer (GSLB)** | DNS level | Routes clients to nearest region or healthy location | Cloudflare, AWS Route53, GCP Cloud DNS |
+
+---
+
+## 🧮 Load Balancing Algorithms
+
+| Algorithm | How it works | When used |
+|---------|--------------|----------|
+**Round Robin** | Rotate servers sequentially | Simple web apps |
+**Weighted Round Robin** | Give powerful servers more traffic | Mixed server capacity |
+**Least Connections** | Send to server with fewest active connections | DB heavy or long-lived connections |
+**IP Hash** | Same client always goes to same server | Session persistence |
+**Random** | Select random server | Simple systems |
+
+---
+
+## 🛡️ Health Checks
+
+Load balancers constantly check if a server is alive.
+
+- **TCP health check** — Can I connect?
+- **HTTP health check** — Does `200 OK` return?
+- **Custom health check** — App-level endpoint `/health`, `/status`
+
+---
+
+## 🌀 What Is a Reverse Proxy?
+
+A **reverse proxy** is a server that sits between users and your backend servers.
+
+It:
+
+✅ Hides backend servers  
+✅ Adds security  
+✅ Caches content  
+✅ Handles SSL termination  
+✅ Load balances (if configured)  
+
+> Think of it as a *bouncer or Gateman* in front of your servers who checks IDs before letting anyone inside 🕴️
+
+---
+
+## 🤝 Reverse Proxy vs Forward Proxy
+
+| Forward Proxy | Reverse Proxy |
+|--------------|---------------|
+Used by **clients** to access the internet | Used by **servers** to protect internal network |
+Hides **client identity** | Hides **server identity** |
+Examples: VPN, Squid | Examples: Nginx, HAProxy, Traefik |
+
+---
+
+## 💡 Popular Tools
+
+| Purpose | Tools |
+|--------|------|
+Layer-7 reverse proxy | **Nginx, Traefik, Apache**
+Layer-4/7 load balancer | **HAProxy, Envoy**
+Cloud LB | **AWS ALB/NLB, GCP LB, Azure Front Door**
+DNS Global LB | **Route53, Cloudflare**
+
+---
+
+## 🍰 SSL Termination & Certificates
+
+Load balancers often terminate SSL:
+
+- They handle HTTPS
+- Backend servers receive plain HTTP
+- Offloads encryption load from apps
+
+Let's Encrypt + Nginx = ❤️
+
+---
+
+## 🧪 Real World Example — Nginx Reverse Proxy & Load Balancer
+
+# ⚖️ Load Balancing & Reverse Proxy — DevOps Deep Dive (Fun + Beginner-Friendly)
+
+Load balancing and reverse proxies are **superpowers** in modern infrastructure.  
+They help scale applications, keep traffic healthy, secure systems, and ensure apps never go down (even when servers do).
+
+If you’ve used Nginx, HAProxy, AWS ALB, Cloudflare, or Traefik — you’ve touched load balancing and reverse proxying.
+
+Let’s break this down in a **DevOps-friendly, practical, and fun** way 🚀
+
+---
+
+## 🧠 What Is Load Balancing?
+
+**Load balancing** is the process of distributing incoming network traffic across multiple servers to:
+
+✅ Improve performance  
+✅ Prevent overload  
+✅ Increase availability  
+✅ Enable horizontal scaling  
+✅ Provide fault tolerance  
+
+> Imagine a restaurant with one chef vs many chefs.  
+> The load balancer is the waiter who sends orders to the chef with free hands 🍽️
+
+---
+
+## 🧩 Types of Load Balancers
+
+| Type | Works On | Description | Examples |
+|------|---------|-------------|---------|
+**Layer 4 (Transport)** | TCP/UDP | Routes traffic based on IP/Port | HAProxy (L4 mode), AWS NLB |
+**Layer 7 (Application)** | HTTP/HTTPS | Understands application data (URLs, cookies, headers) | Nginx, AWS ALB, Traefik |
+**Global Load Balancer (GSLB)** | DNS level | Routes clients to nearest region or healthy location | Cloudflare, AWS Route53, GCP Cloud DNS |
+
+---
+
+## 🧮 Load Balancing Algorithms
+
+| Algorithm | How it works | When used |
+|---------|--------------|----------|
+**Round Robin** | Rotate servers sequentially | Simple web apps |
+**Weighted Round Robin** | Give powerful servers more traffic | Mixed server capacity |
+**Least Connections** | Send to server with fewest active connections | DB heavy or long-lived connections |
+**IP Hash** | Same client always goes to same server | Session persistence |
+**Random** | Select random server | Simple systems |
+
+---
+
+## 🛡️ Health Checks
+
+Load balancers constantly check if a server is alive.
+
+- **TCP health check** — Can I connect?
+- **HTTP health check** — Does `200 OK` return?
+- **Custom health check** — App-level endpoint `/health`, `/status`
+
+---
+
+## 🌀 What Is a Reverse Proxy?
+
+A **reverse proxy** is a server that sits between users and your backend servers.
+
+It:
+
+✅ Hides backend servers  
+✅ Adds security  
+✅ Caches content  
+✅ Handles SSL termination  
+✅ Load balances (if configured)  
+
+> Think of it as a *bouncer* in front of your servers who checks IDs before letting anyone inside 🕴️
+
+---
+
+## 🤝 Reverse Proxy vs Forward Proxy
+
+| Forward Proxy | Reverse Proxy |
+|--------------|---------------|
+Used by **clients** to access the internet | Used by **servers** to protect internal network |
+Hides **client identity** | Hides **server identity** |
+Examples: VPN, Squid | Examples: Nginx, HAProxy, Traefik |
+
+---
+
+## 💡 Popular Tools
+
+| Purpose | Tools |
+|--------|------|
+Layer-7 reverse proxy | **Nginx, Traefik, Apache**
+Layer-4/7 load balancer | **HAProxy, Envoy**
+Cloud LB | **AWS ALB/NLB, GCP LB, Azure Front Door**
+DNS Global LB | **Route53, Cloudflare**
+
+---
+
+## 🍰 SSL Termination & Certificates
+
+Load balancers often terminate SSL:
+
+- They handle HTTPS
+- Backend servers receive plain HTTP
+- Offloads encryption load from apps
+
+Let's Encrypt + Nginx = ❤️
+
+---
+
+## 🧪 Real World Example — Nginx Reverse Proxy & Load Balancer
+
+### 📁 Directory
+
+`/etc/nginx/nginx.conf`
+`/etc/nginx/sites-enabled/myapp.conf`
+
+### 🧠 Basic Nginx Load Balancer Config
+
+nginx
+
+upstream backend_servers {
+    server 10.0.1.10;
+    server 10.0.1.11;
+    server 10.0.1.12;
+}
+
+server {
+    listen 80;
+    server_name myapp.com;
+
+    location / {
+        proxy_pass http://backend_servers;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+
+
+
+## ✅ What this does
+
+    - Accepts client traffic at port 80
+
+    - Forwards to 3 backend servers
+
+    - Adds real IP to header so app knows client identity
+
+    - Balances traffic automatically
+
+**Try replacing with:**
+
+    - `least_conn`; for least connections
+
+    - `ip_hash`; for sticky 
+    
+    ---  
+
+
+## 🏗️ DevOps Use Cases
+
+| Use Case               | Example                                    |
+| ---------------------- | ------------------------------------------ |
+| Blue-green deployment  | Send % of traffic to new app version       |
+| Canary testing         | Route only some users to test release      |
+| Zero-downtime upgrades | Rotate servers without interruption        |
+| Multi-AZ failover      | Route to healthy DC                        |
+| API Gateway            | Use as secure entry point to microservices |
+
+
+---
+
+## 🪬 Sticky Sessions (Session Persistence)
+
+- Ensures users always land on same backend
+
+- Needed for login sessions, carts, etc (unless Redis session store used)
+
+- Methods: `IP Hash`, `Cookie sticky`
+
+---
+
+## 🚦 Rate Limiting & Security
+
+Reverse proxies can:
+
+- Block bots
+
+- Limit requests per IP
+
+- Filter IPs
+
+- Reject malicious payloads (WAF)
+
+Example of Nginx rate limit:
+
+`limit_req_zone` $binary_remote_addr zone=api:10m rate=10r/s;`
+
+
+---
+
+## 🧠 Quick Cheat Sheet
+
+| Topic           | Key Point                               |
+| --------------- | --------------------------------------- |
+| Load Balancer   | Distributes traffic to servers          |
+| Reverse Proxy   | Sits in front of servers, adds security |
+| Layer 4         | TCP/UDP routing                         |
+| Layer 7         | HTTP/HTTPS intelligent routing          |
+| Global LB       | DNS-level region routing                |
+| Sticky Sessions | Keep user on same backend               |
+| SSL Termination | LB handles HTTPS                        |
+
+
+
+
+
+
+
