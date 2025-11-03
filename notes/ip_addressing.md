@@ -241,12 +241,14 @@ You will need subnetting for:
 | Docker             | Bridge networks                 |
 | Corporate networks | VLAN planning                   |
 
+---
 
-#### In linux terminal: Display IP
+
+## Must Commands to Know: Display IP
 
 `ip addr show`
 
-##### `ip addr show` Output
+### `ip addr show` Output
 
 | Section | Meaning |
 |--------|--------|
@@ -261,13 +263,13 @@ Interface name (`ens33`) | The actual network card your machine uses |
 
 ---
 
-#### Assign IP
+### Assign IP
 
 `sudo ip addr add 192.168.10.5/24 dev eth0`
 
 ---
 
-#### Ping a host
+### Ping a host
 
 `ping google.com`
 
@@ -287,7 +289,7 @@ Interface name (`ens33`) | The actual network card your machine uses |
 | `packet loss 0%`                     | No loss = stable network                                      |
 | `rtt min/avg/max/stddev`             | Speed & consistency of network responses                      |
 
-###### 💡 Important Concepts
+#### 💡 Important Concepts
 
 - Ping uses ICMP protocol
 
@@ -299,14 +301,14 @@ Interface name (`ens33`) | The actual network card your machine uses |
 
 ---
 
-#### Check public IP
+### Check public IP
 
 `curl ifconfig.me`
 
 ---
 
 
-### 📦 Bits vs Bytes — What's the Difference?
+## 📦 Bits vs Bytes — What's the Difference?
 
 These two can really confuse a junior engineer, here is a short note on their differences.
 
