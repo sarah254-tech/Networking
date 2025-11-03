@@ -86,7 +86,7 @@ It explains data flow in **5 layers**.
 
 ---
 
-# 🧠 OSI Model — Application Layer (Layer 7)
+# 🧠 Application Layer (Layer 7)
 
 The **Application Layer** is the top layer of the OSI model.  
 It provides the **interface between user applications and the network**.
@@ -269,9 +269,9 @@ Example:
 
 ---
 
-## Presentation Layer & Session Layer
+# Presentation Layer & Session Layer
 
-### Layer 6: Presentation Layer
+## Layer 6: Presentation Layer
 
 The **Presentation Layer** is responsible for making data from the application layer readable across different systems. It ensures **formatting, encryption, and compression** of data.
 
@@ -298,7 +298,7 @@ When visiting a secure website (HTTPS), this layer encrypts data using **TLS**, 
 
 ---
 
-### Layer 5: Session Layer
+## Layer 5: Session Layer
 
 The **Session Layer** manages and controls **sessions** — ongoing communication between two devices. It opens, maintains, and closes dialogs.
 
@@ -350,7 +350,7 @@ Session | Create, maintain, close connection | Starting, continuing, and ending 
 
 ---
 
-## 🧩 Layer 4: Transport Layer
+# 🧩 Layer 4: Transport Layer
 
 Welcome to the **Transport Layer** — the **traffic controller** and **delivery service** of networking.
 
@@ -363,9 +363,39 @@ Think of it like a global courier (DHL/UPS):
 
 Without this layer, the internet would be chaos — like throwing letters into the air and hoping they land in the right mailbox!
 
+> Note that transport layer is easily confused with Network layer. Below is table that differentiate their jobs.
+
+## 🚚 Transport Layer vs 🌐 Network Layer
+
+| Feature                | **Transport Layer (Layer 4)**                               | **Network Layer (Layer 3)**                    |
+| ---------------------- | ----------------------------------------------------------- | ---------------------------------------------- |
+| **Primary Purpose**    | Reliable delivery **between processes (apps)**              | Delivery **between devices/networks**          |
+| **Main Role**          | Ensures complete, correct data delivery end-to-end          | Finds the best path across networks            |
+| **Communication Type** | **End-to-end** (host to host apps)                          | **Hop-to-hop** (router to router)              |
+| **Key Functions**      | Connection mgmt, error handling, flow control, segmentation | Routing, logical addressing, packet forwarding |
+| **Data Unit Name**     | Segment (TCP) / Datagram (UDP)                              | Packet                                         |
+| **Protocols**          | **TCP**, **UDP**, SCTP                                      | **IP**, ICMP, ARP, IGMP                        |
+| **Addressing**         | **Port Numbers** (e.g., 443, 22, 80)                        | **IP Addresses** (e.g., 192.168.1.10)          |
+| **Reliability**        | Can be reliable (TCP) or unreliable (UDP)                   | No reliability — only forwarding               |
+| **Error Handling**     | Yes (retransmission, checksum)                              | Limited (ICMP error reporting)                 |
+| **Flow Control**       | Yes (TCP sliding window)                                    | No                                             |
+| **Routing Involved?**  | ❌ No                                                        | ✅ Yes (routing tables, BGP, OSPF, RIP)         |
+| **Device Involved**    | Host machines                                               | **Routers**                                    |
+| **OSI Layer #**        | Layer 4                                                     | Layer 3                                        |
+| **Examples**           | HTTP relies on TCP, DNS can use UDP                         | Your IP packet crossing the internet           |
+
+
+### 🤓 Quick memory hack
+
+| Mnemonic                                           | Meaning                       |
+| -------------------------------------------------- | ----------------------------- |
+| **Transport = T for Talking between applications** | It manages the *conversation* |
+| **Network = N for Navigating networks**            | It manages the *path/route*   |
+
+
 ---
 
-### 🎯 What the Transport Layer Does
+### 🎯 What the Transport Layer Does - Deep dive with fun analogies
 
 | Function | Description | Real-Life Analogy |
 |---|---|---|
@@ -396,13 +426,19 @@ Use Case | Browsing, email, file transfer | Streaming, gaming, VoIP |
 
 ---
 
+## Connection flow in TCP
+
+Connection is controlled by **Timers**, and the packets of data sent are traced using the sequence number. With this kind of back and forth communication, the data is traced and timed and errors and omitted! Cool!
+
+`sudo tcpdump -c 5` - this command shows you the number of packets coming in, in this case, `5` being the number packets I have set to recieve. 
+
 ### 🤝 TCP Handshake (3-Way Handshake)
 
 TCP sets up a connection first — like a polite conversation:
 
-`Client: SYN → Hey, can we talk?`
-`Server: SYN-ACK → Sure, I'm ready!`
-`Client: ACK → Great, let’s start!`
+`Client: SYN → Hey, can we talk?` - Synchronisation flag + Sequence number
+`Server: SYN-ACK → Sure, I'm ready!` Synchronisation flag + Server Acknowlegemnt Number.
+`Client: ACK → Great, let’s start!` Acknowlegement (number +1)
 
 Connection is established ✅  
 Now real data flows.
@@ -431,9 +467,15 @@ Congestion Avoidance | Avoids flooding the network |
 
 ---
 
-### 🎮 UDP in Action — Low Latency Wins
+## 🎮 UDP in Action — Low Latency Wins
 
-UDP sends without waiting — speed over reliability.
+Components of a UDP packet:
+
+- Source and Destination Port numbers.
+- Length of datagram.
+- Checksum.
+
+UDP sends without waiting, speed over reliability.
 
 Used in:
 
@@ -511,7 +553,7 @@ Use | Email, Web, File Transfer | Video, Games, VoIP |
 
 ---
 
-## 🌐 Network, Data-Link, and Physical layers
+# 🌐 Network, Data-Link, and Physical layers
 
 These are the **foundation levels** of the OSI model — where IP addresses, MAC addresses, routers, switches, cables, and electricity all come alive.
 
@@ -525,12 +567,14 @@ The **Network Layer** handles **routing**, **logical addressing**, and **path se
 
 > Think of this layer as **Google Maps for your data** — deciding the best route across the internet.
 
+**Control Plane**:  This is where the Routers tables lie. Routers are nodes and the links between are the Egdes. Routers create a sort of maps or graphs that are connected.
+
 ### 🧠 Core Responsibilities
 
 | Function | Meaning |
 |---|---|
 Logical addressing | Assigns IP addresses to devices |
-Routing | Chooses best path across networks |
+Routing (Routing Table) | Chooses best path across networks |
 Packet forwarding | Moves data from router to router |
 Fragmentation | Breaks large packets if needed |
 

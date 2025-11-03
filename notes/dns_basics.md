@@ -154,6 +154,10 @@ Browser connects to the server using IP
 
 🎬 Done in milliseconds!
 
+> It's interesting to note that you can never buy a domain name, but only rent it.
+
+> `man dig` - is the quick DNS name servers look-up command.
+
 ---
 
 ## 🧠 DNS Records (Cheat Sheet Table)
