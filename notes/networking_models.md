@@ -615,7 +615,7 @@ IPSec | Secure IP traffic |
 
 ## 2️⃣ Data-Link Layer (Layer 2)
 
-The **Data-Link Layer** provides **node-to-node delivery** inside the same local network (LAN).
+The **Data-Link Layer** provides **node-to-node delivery** inside the same local network (LAN). DHCP (Dynamic Host Configuration Protocol) servers are the point of contact for new devices to get allocated a new IP address. Data link layer Address of sender and IP address of destination are part the shoe kinking process.
 
 > Think of it as **the rulebook for neighbors talking over the fence**.
 

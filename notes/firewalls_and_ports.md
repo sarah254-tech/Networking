@@ -9,7 +9,8 @@ As a DevOps engineer, we’ll deal with firewalls and port rules daily, especial
 
 ## 🧱 What is a Firewall?
 
-A **firewall** is a security device or software that monitors incoming and outgoing traffic and decides whether to allow or block it based on security rules.
+A **firewall** is a security device or software that monitors incoming and outgoing traffic and decides whether to allow or block it based on security rules. They are also called **middleboxes.** 
+Other middleboxes are: Network Address Translator(NAT)
 
 Think of it as:
 
