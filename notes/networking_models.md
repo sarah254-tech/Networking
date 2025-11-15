@@ -1,3 +1,143 @@
+# Networking Glossary
+
+A complete reference list of the most common and important networking acronyms, explained in simple and clear language.
+
+---
+## 🛰️ General Networking & Internet Acronyms
+
+| Acronym  | Full Meaning                        | Explanation                                                                                     |
+| -------- | ----------------------------------- | ----------------------------------------------------------------------------------------------- |
+| **IP**   | Internet Protocol                   | The main addressing system of the internet. Every device gets an IP address to communicate.     |
+| **TCP**  | Transmission Control Protocol       | Reliable, connection-oriented communication. Ensures every packet reaches the destination.      |
+| **UDP**  | User Datagram Protocol              | Fast, connectionless communication. No guarantee of delivery. Used for streaming, VoIP, gaming. |
+| **ISP**  | Internet Service Provider           | The company that provides you internet access (e.g., Vodafone, MTN).                            |
+| **LAN**  | Local Area Network                  | A small network in one location (home, office).                                                 |
+| **WAN**  | Wide Area Network                   | Large-scale network over long distances (e.g., the internet).                                   |
+| **MAN**  | Metropolitan Area Network           | Large network covering a city.                                                                  |
+| **PAN**  | Personal Area Network               | Small range network around a single person (Bluetooth devices).                                 |
+| **NAT**  | Network Address Translation         | A method to allow multiple private devices to share one public IP.                              |
+| **DHCP** | Dynamic Host Configuration Protocol | Automatically assigns IP addresses to devices.                                                  |
+| **DNS**  | Domain Name System                  | Converts domain names (google.com) into IP addresses.                                           |
+| **MAC**  | Media Access Control                | A hardware address burned into network interface cards.                                         |
+| **MTU**  | Maximum Transmission Unit           | The largest packet size a network can transmit.                                                 |
+| **QoS**  | Quality of Service                  | Prioritizes certain traffic (e.g., video calls > downloads).                                    |
+| **ICMP** | Internet Control Message Protocol   | Used for error messages and tools like `ping`, `traceroute`.                                    |
+| **TTL**  | Time To Live                        | Limits how long a packet stays on the network. Seen in `ping` output.                           |
+| **ARP**  | Address Resolution Protocol         | Maps IP addresses to MAC addresses in a LAN.                                                    |
+| **RARP** | Reverse ARP                         | Maps MAC addresses to IP addresses (rare today).                                                |
+| **VLAN** | Virtual Local Area Network          | Segments one physical network into multiple virtual networks.                                   |
+| **VPN**  | Virtual Private Network             | Creates an encrypted tunnel over the internet.                                                  |
+| **MPLS** | Multi-Protocol Label Switching      | High-performance routing in enterprise networks.                                                |
+| **CIDR** | Classless Inter-Domain Routing      | Modern IP addressing that supports variable subnet masks.                                       |
+| **FQDN** | Fully Qualified Domain Name         | The complete domain name (e.g., `api.example.com`).                                             |
+| **CDN**  | Content Delivery Network            | Caches content closer to users (e.g., Cloudflare, Akamai).                                      |
+
+---
+
+## 🌐 HTTP, Web & Application Layer Acronyms
+
+| Acronym   | Full Meaning                          | Explanation                                           |
+| --------- | ------------------------------------- | ----------------------------------------------------- |
+| **HTTP**  | HyperText Transfer Protocol           | The web’s main communication protocol.                |
+| **HTTPS** | HTTP Secure                           | HTTP + SSL/TLS for encrypted web browsing.            |
+| **URL**   | Uniform Resource Locator              | The address used to access a web resource.            |
+| **URI**   | Uniform Resource Identifier           | A broader identifier (includes URLs).                 |
+| **HTML**  | HyperText Markup Language             | Structure of web pages.                               |
+| **CSS**   | Cascading Style Sheets                | For designing and styling web pages.                  |
+| **API**   | Application Programming Interface     | A defined way for applications to communicate.        |
+| **REST**  | Representational State Transfer       | A common API architectural style.                     |
+| **SOAP**  | Simple Object Access Protocol         | A strict and XML-based API protocol.                  |
+| **SSL**   | Secure Sockets Layer                  | Older encryption protocol for web traffic.            |
+| **TLS**   | Transport Layer Security              | Newer, secure version of SSL.                         |
+| **JSON**  | JavaScript Object Notation            | Lightweight data format used in APIs.                 |
+| **XML**   | eXtensible Markup Language            | Structured data format, older than JSON.              |
+| **MIME**  | Multipurpose Internet Mail Extensions | Identifies content type (e.g., `"application/json"`). |
+
+---
+
+## ✉️ Email Protocol Acronyms
+
+| Acronym  | Full Meaning                     | Explanation                                                 |
+| -------- | -------------------------------- | ----------------------------------------------------------- |
+| **SMTP** | Simple Mail Transfer Protocol    | Used to **send** emails.                                    |
+| **POP3** | Post Office Protocol version 3   | Downloads emails from server to client.                     |
+| **IMAP** | Internet Message Access Protocol | Accesses emails directly on the server (modern, preferred). |
+| **MTA**  | Mail Transfer Agent              | Software that routes emails (e.g., Postfix, Sendmail).      |
+| **MUA**  | Mail User Agent                  | Email client (Gmail, Outlook).                              |
+
+---
+
+## 🚦 Routing, Switching & Infrastructure Acronyms
+| Acronym  | Full Meaning                      | Explanation                                             |
+| -------- | --------------------------------- | ------------------------------------------------------- |
+| **OSPF** | Open Shortest Path First          | Popular internal network routing protocol.              |
+| **BGP**  | Border Gateway Protocol           | The main routing protocol of the internet.              |
+| **RIP**  | Routing Information Protocol      | Older distance-vector routing protocol.                 |
+| **ACL**  | Access Control List               | Rules to allow or deny traffic.                         |
+| **STP**  | Spanning Tree Protocol            | Prevents network loops in switching.                    |
+| **LACP** | Link Aggregation Control Protocol | Combines multiple physical links into one logical link. |
+| **DMZ**  | Demilitarized Zone                | Isolated network area for public-facing servers.        |
+
+---
+
+## 🔐 Security Acronyms
+
+| Acronym  | Full Meaning                           | Explanation                                        |
+| -------- | -------------------------------------- | -------------------------------------------------- |
+| **IDS**  | Intrusion Detection System             | Detects suspicious activity.                       |
+| **IPS**  | Intrusion Prevention System            | Detects and actively blocks attacks.               |
+| **WAF**  | Web Application Firewall               | Protects web apps from attacks like SQL injection. |
+| **SSH**  | Secure Shell                           | Secure login to remote servers.                    |
+| **IAM**  | Identity and Access Management         | Controls user permissions (AWS IAM).               |
+| **HMAC** | Hash-Based Message Authentication Code | Ensures integrity + authenticity of messages.      |
+
+---
+
+## 📦 Cloud & DevOps Acronyms
+
+| Acronym   | Full Meaning                   | Explanation                                          |
+| --------- | ------------------------------ | ---------------------------------------------------- |
+| **IaaS**  | Infrastructure as a Service    | Cloud compute, storage, network (AWS EC2, Azure VM). |
+| **PaaS**  | Platform as a Service          | App platform (Heroku, Elastic Beanstalk).            |
+| **SaaS**  | Software as a Service          | Cloud software (Gmail, Slack).                       |
+| **VPC**   | Virtual Private Cloud          | A private network inside AWS/Azure/GCP.              |
+| **ENI**   | Elastic Network Interface      | Virtual network card in AWS.                         |
+| **ALB**   | Application Load Balancer      | L7 load balancer on AWS.                             |
+| **NLB**   | Network Load Balancer          | L4 load balancer for high-performance traffic.       |
+| **IGW**   | Internet Gateway               | Allows VPC to reach the internet.                    |
+| **NATGW** | NAT Gateway                    | Allows private instances to access the internet.     |
+| **CIDR**  | Classless Inter-Domain Routing | Defines IP ranges used in subnets/VPCs.              |
+
+---
+
+## 🛠️ Protocols & Tools
+
+| Acronym   | Full Meaning                       | Explanation                                        |
+| --------- | ---------------------------------- | -------------------------------------------------- |
+| **FTP**   | File Transfer Protocol             | Transfers files between computers.                 |
+| **SFTP**  | SSH File Transfer Protocol         | Secure version of FTP.                             |
+| **TFTP**  | Trivial FTP                        | Lightweight file transfer (used for configs/boot). |
+| **SNMP**  | Simple Network Management Protocol | Manages network devices.                           |
+| **NTP**   | Network Time Protocol              | Syncs clocks on devices.                           |
+| **WHOIS** | (Not an acronym)                   | Database lookup of domain ownership.               |
+| **DIG**   | Domain Information Groper          | DNS lookup tool.                                   |
+
+---
+
+## 🖼️ Data Formats & Encoding Acronyms
+
+| Acronym   | Full Meaning                                       | Explanation                               |
+| --------- | -------------------------------------------------- | ----------------------------------------- |
+| **ASCII** | American Standard Code for Information Interchange | Early text encoding standard.             |
+| **UTF**   | Unicode Transformation Format                      | Modern encoding supporting all languages. |
+| **JPEG**  | Joint Photographic Experts Group                   | Popular compressed image format.          |
+| **PNG**   | Portable Network Graphics                          | Lossless image format.                    |
+| **GIF**   | Graphics Interchange Format                        | Supports animations.                      |
+| **MP4**   | MPEG-4 Part 14                                     | Common video format.                      |
+| **AVI**   | Audio Video Interleave                             | Older Microsoft video format.             |
+
+---
+
 # 📡 Networking Models Summary
 
 Understanding networking models helps us see **how data travels** across networks. The two main models used in networking are:
@@ -243,18 +383,20 @@ Example:
 
 ### DNS Record Types
 
-| Record | Purpose |
-|--------|---------|
-| **A** | Domain → IPv4 |
-| **AAAA** | Domain → IPv6 |
-| **CNAME** | Alias domain |
-| **MX** | Mail server |
-| **TXT** | Verification / security |
-| **NS** | Name servers |
+| Record | Stands For         | What It Does                          |
+| ------ | ------------------ | ------------------------------------- |
+| A      | Address            | Maps a domain to an IPv4 address                          |
+| AAAA   | Quad-A             | Maps a domaain to an IPv6 address                          |
+| CNAME  | Canonical Name     | Creates an alias to another domain               |
+| MX     | Mail eXchange      | Specifies Mail servers  responsible for receiving emails for your domain.                |
+| NS     | Name Server        | Defines the authoritative DNS servers for the domain            |
+| TXT    | Text               | Info used for verification + security ( SPF, DKIM, DMARC, Verification, Security policies)|
+| SOA    | Start of Authority | DNS zone admin details("Birth certificate" of a DNS zone)                |
+
 
 ### DNS Tools
-- `nslookup`
-- `dig`
+- `nslookup` - Name Server Look Up
+- `dig` - Domain Information Groper
 - `host`
 
 ---
